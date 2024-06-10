@@ -9,7 +9,7 @@ interface Errors {
 }
 
 async function signupApiCall({ username, email, password }: { username: string; email: string; password: string }) {
-  const response = await fetch('http://localhost:8000/api/auth/signup', {
+  const response = await fetch('https://seekon.vercel.app/api/auth/signup', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',

@@ -15,7 +15,7 @@ export default function UserPage({ initialUserData, error }) {
   const handleLogout = async () => { 
     setisLoading(true)
     try {
-      const response = await fetch('http://localhost:8000/api/auth/logout', {
+      const response = await fetch('https://seekon.vercel.app/api/auth/logout', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -72,7 +72,7 @@ export async function getServerSideProps(context) {
   const { username } = context.params;
 
   try {
-    const res = await fetch(`http://localhost:8000/api/user/${username}`);
+    const res = await fetch(`https://seekon.vercel.app/api/user/${username}`);
     if (!res.ok) {
       throw new Error('Failed to fetch user data');
     }
